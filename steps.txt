@@ -1,0 +1,111 @@
+/* ----- AULA 1 ----- */
+
+1) INICIALIZAR O NODE
+-> npm init -y
+
+2) PRIMEIRAS DEPENDÊNCIAS
+-> npm i fastify (semelhante ao express)
+-> npm i typescript -D (dependência de desenvolvimento, utilizada apenas no dev da aplicação, não em produção)
+-> npm i tsx -D (executar arquivo node com typescript sem precisar converte-lo)
+-> npm i prisma -D (ferramenta de ORM pra manipulação de queries)
+-> npm i @prisma/client
+-> npm i @fastify/cors
+
+3) INICIALIZAR TYPESCRIPT
+-> npx tsc --init
+-> alterar target pra es2020
+
+4) INICIALIZAR E TRABALHAR COM PRISMA
+-> npx prisma init --datasource-provider SQLite
+-> criar tabelas com a palavra "model" (mais infos dentro do arquivo schema.prisma)
+(instalar também extensão do prisma)
+-> rodar "npx prisma migrate dev" pra criar o arquivo sql que irá fazer as alterações no db e versionar o db com as migrations
+-> pra visualizar as tabelas basta executar "npx prisma studio" que irá abrir uma interface web bem top
+
+5) INSTALAR CORS (INTEGRADO COM FASTIFY)
+-> o CORS irá dar permissão para aplicações específicas poderem acessar os dados do backend (incluindo aplicações de frontend)
+
+6) INICIALIZANDO O FRONTEND COM VITE
+-> "npm create vite@latest" -> escolho um nome pro diretório do front (será web), e escolhe o framework e linguagem
+-> rodar npm install pra atualizar as dependência que vieram junto com o package.json que o vite criou
+
+7) INSTALANDO E INICIALIZANDO FRAMEWORKS DE ESTILIZAÇÃO
+-> npm i -D tailwindcss postcss autoprefixer
+tailwindcss -> plugin do postcss
+postcss -> automatizar tarefas no css
+autoprefixer -> adiciona prefixos de browser
+-> npx tailwindcss init -p
+(instalar também extensões do tailwind e postcss)
+-> criar uma pasta styles com o fonte global.css e importar oq eu escrevi lá dentro
+-> dentro de tailwind.config.cjs (que foi criado junto com o init do tailwindcss -p), declarar quais os arquivos irão receber os estilos declarados no passo anterior a esse
+
+8) COMEÇANDO A CONFIGURAR O AMBIENTE MOBILE
+-> instalar o Expo, que irá fazer com que não seja necessário instalar e configurar ferramentas tanto pra android quanto pra ios, mas sim apenas 1 instalação que o expo da conta de configurar pra ambos SOs:
+"npm i -g expo-cli"
+-> pra criar os arquivos iniciais do mobile:
+"npx create-expo-app mobile --template" 
+-> instalar fontes personalizadas pra aplicação 
+https://docs.expo.dev/guides/using-custom-fonts/
+ali dentro tem mais informações, mas pra usar fontes do google:
+"npx expo install expo-font @expo-google-fonts/NOME-FONTE"
+-> aí é só importar useFonts e todas as fontes que vão ser usadas, depois inicializá-las dentro da função App
+-> pra iniciar "npx expo start"
+
+
+/* ----- AULA 2 ----- */
+
+*** BACK-END ***
+
+1) ADICIONANDO NOVAS TABELAS
+-> lembrar sempre de, após adicionar novas tabelas, rodar "npx prisma migrate dev" pra detectar as mudanças e criar o versionamento e as tabelas em sql
+
+2) ADICIONANDO CHAVES ESTRANGEIRAS
+-> isso é feito criando dentro da tabela desejada os campos que serão fk, passando o tipo deles como o nome do model (tabela) que virá a FK, depois disso formata-se o documento (>format document) e refatora as variáveis geradas
+ex: foi criada a tabela days e habits, e a day_habits. a última terá FK das 2 primeiras, então dentro dela cria-se "day Day" (day do tipo Day) e "habit Habit"
+
+3) VISUALIZANDO O DIAGRAMA DO DB CRIADO
+-> instalar a dependência de dev "npm i -D prisma-erd-generator @mermaid-js/mermaid-cli"
+-> rodar "npx prisma generate" 
+
+4) CRIAR SEED DO DB
+-> seed é um populador de DB, que irá criar dados mock pro banco. começa copiando o modelo de arquivo "seed.ts" encontrado na doc do prisma:
+https://www.prisma.io/docs/guides/database/seed-database
+-> lembrar de incluir o seed no package.json
+-> rodar "npx prisma db seed"
+
+5) MELHORANDO ARQUITETURA DE ARQUIVOS
+-> criado o diretório "lib" onde foi adicionada a criação da instância do prisma e exportada pra ser importada de volta onde estava (server.ts)
+-> rotas também removidas do server.ts e passadas pro novo arquivo routes.ts. dentro desse novo arquivo é preciso declarar uma função que será exportada (com o async pro fastify não aguardar) e importada no app.register() do server.ts
+
+6) NOVAS ROTAS E FRAMEWORK ZOD
+-> o zod além de definir os tipos das propriedades que virão no json do body, consegue também criar validações para cada uma das propriedades (ver createHabitBody)
+
+*** FRONT-END ***
+
+7) MELHORANDO O FRONT-END
+-> foram criados os componentes HabitDay, Header e SummaryTable
+
+*** MOBILE ***
+
+8) UTILIZANDO O TAILWIND NO REACT NATIVE
+-> pra poder utilizar o tailwind com o react nativa é preciso instalar o NativeWind:
+https://www.nativewind.dev/quick-starts/expo
+"npm i nativewind", "npm i tailwindcss --save-dev"
+-> agora, para criar o arquivo tailwind.config.js, pode-se executar o comando:
+"npx tailwindcss init"
+-> é preciso configurar esse arquivo tailwind.config.js, igual foi feito pra web, passando as extensões e arquivos que irão receber estilo dentro de "content"
+-> adicionar também em babel.config.js a linha "plugins: ["nativewind/babel"],"
+
+9) CRIANDO A HOME
+-> antes de mais nada, a propriedade className não será identificada antes de realizar os passos encontrados no link:
+https://www.nativewind.dev/getting-started/typescript
+-> pra usar svg é preciso instalar as bibliotecas:
+"npx expo install react-native-svg"
+e para usar o svg como componente:
+"npm i react-native-svg-transformer -D", criar o arquivo metro.config.js e seguir os passos de instalação:
+https://github.com/kristerkari/react-native-svg-transformer
+lembrar tb de configurar o ambiente para que o typescript interprete o svg
+
+
+/* ----- AULA 3 ----- */
+1)
