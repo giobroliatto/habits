@@ -108,4 +108,22 @@ lembrar tb de configurar o ambiente para que o typescript interprete o svg
 
 
 /* ----- AULA 3 ----- */
-1)
+
+*** BACK-END ***
+
+1) CRIAÇÃO DE NOVAS ROTAS
+
+*** FRONT-END ***
+
+2) CRIANDO MODAL
+-> introduzido o conceito do useState do react, que basicamente irá verificar o valor de uma variável apenas quando houver interação, e não o tempo inteiro como acontece no angular pelo two way data binding
+-> instalar biblioteca pra usar componentes que tenham acessibilidade (radix-ui):
+"npm install @radix-ui/react-dialog" (especificamente o modal ta sendo instalado aqui)
+
+3) CRIANDO OS POPOVERS DE CADA DIA
+-> instalando mais um componente do radix:
+"npm install @radix-ui/react-popover"
+
+4) TRABALHANDO NA BARRA DE PERCENTUAL DE HÁBITOS CONCLUÍDOS
+-> criado o componente ProgressBar, e pra alterar a cor de cada quadrado que representa o dia de forma dinâmica e fácil, utilizamos a biblioteca clsx, que permite fazer condicionais dentro do className
+"npm i clsx"
