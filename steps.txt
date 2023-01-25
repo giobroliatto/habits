@@ -127,3 +127,14 @@ lembrar tb de configurar o ambiente para que o typescript interprete o svg
 4) TRABALHANDO NA BARRA DE PERCENTUAL DE HÁBITOS CONCLUÍDOS
 -> criado o componente ProgressBar, e pra alterar a cor de cada quadrado que representa o dia de forma dinâmica e fácil, utilizamos a biblioteca clsx, que permite fazer condicionais dentro do className
 "npm i clsx"
+
+*** MOBILE ***
+
+5) NAVEGAÇÃO NO MOBILE COM REACT NAVIGATION
+-> https://reactnavigation.org/docs/getting-started/
+"npm install @react-navigation/native"
+"npx expo install react-native-screens react-native-safe-area-context" 
+-> https://reactnavigation.org/docs/hello-react-navigation
+"npm install @react-navigation/native-stack"
+-> após criar o arquivo de rotas (app.routes.tsx), cria-se também o arquivo index.tsx dentro de src, que será o arquivo responsável dentro de App.tsx por chamar o AppRoutes e navegar entre as telas
+-> é importante configurar o typescript para que ele receba os parâmetros (quando existam) de cada rota que será chamada. isso é feito dentro de navigation.d.ts, nos @types
