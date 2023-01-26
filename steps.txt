@@ -138,3 +138,10 @@ lembrar tb de configurar o ambiente para que o typescript interprete o svg
 "npm install @react-navigation/native-stack"
 -> após criar o arquivo de rotas (app.routes.tsx), cria-se também o arquivo index.tsx dentro de src, que será o arquivo responsável dentro de App.tsx por chamar o AppRoutes e navegar entre as telas
 -> é importante configurar o typescript para que ele receba os parâmetros (quando existam) de cada rota que será chamada. isso é feito dentro de navigation.d.ts, nos @types
+
+
+/* ----- AULA 4 ----- */
+
+1) CRIANDO CHECKBOXES
+-> começar instalando o componente de checkbox do radix (biblioteca q já estava sendo usada pq tem um código com boa acessibilidade)
+"npm install @radix-ui/react-checkbox"
