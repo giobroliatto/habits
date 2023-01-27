@@ -142,6 +142,11 @@ lembrar tb de configurar o ambiente para que o typescript interprete o svg
 
 /* ----- AULA 4 ----- */
 
+*** FRONT-END ***
+
 1) CRIANDO CHECKBOXES
 -> começar instalando o componente de checkbox do radix (biblioteca q já estava sendo usada pq tem um código com boa acessibilidade)
 "npm install @radix-ui/react-checkbox"
+
+2) PREPARAR DADOS A ENVIAR PRO BACK NO MODAL DE NOVO HÁBITO
+-> criadas funções de controle das informações passadas no modal
