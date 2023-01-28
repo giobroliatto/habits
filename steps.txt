@@ -156,3 +156,5 @@ lembrar tb de configurar o ambiente para que o typescript interprete o svg
 3) CONECTANDO A API AO FRONT
 -> pra fazer as requisições http, instalar a biblioteca axios "npm i axios"
 -> requisição criada em SummaryTable usando useEffect do react
+
+4) CRIAR NOVO HÁBITO
