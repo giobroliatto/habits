@@ -150,3 +150,9 @@ lembrar tb de configurar o ambiente para que o typescript interprete o svg
 
 2) PREPARAR DADOS A ENVIAR PRO BACK NO MODAL DE NOVO HÁBITO
 -> criadas funções de controle das informações passadas no modal
+
+*** BACK-END ***
+
+3) CONECTANDO A API AO FRONT
+-> pra fazer as requisições http, instalar a biblioteca axios "npm i axios"
+-> requisição criada em SummaryTable usando useEffect do react
