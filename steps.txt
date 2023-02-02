@@ -157,4 +157,8 @@ lembrar tb de configurar o ambiente para que o typescript interprete o svg
 -> pra fazer as requisições http, instalar a biblioteca axios "npm i axios"
 -> requisição criada em SummaryTable usando useEffect do react
 
-4) CRIAR NOVO HÁBITO
+*** MOBILE ***
+
+4) CONECTANDO A API AO MOBILE
+-> instalar também para o mobile o "axio"
+-> configurar o axios.ts dentro de lib com o enderço ip da máquina ao invés do localhost
