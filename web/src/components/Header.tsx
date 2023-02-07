@@ -1,25 +1,23 @@
 import { Plus, X } from "phosphor-react";
-import logoImage from '../assets/logo.svg'
 import * as Dialog from '@radix-ui/react-dialog';
 import { NewHabitForm } from "./NewHabitForm";
+import LogoImage from '../assets/logo.svg'
 
 export function Header() {
 
   return (
     <div className="w-full max-w-3xl mx-auto flex items-center justify-between">
-      <img src={logoImage} alt="habits" />
+      <img src={LogoImage} alt="" />
 
       <Dialog.Root>
-
         <Dialog.Trigger
           type="button"
-          className='border border-violet-500 font-semibold rounded-lg px-6 py-4 flex items-center gap-3 hover:border-violet-300'
+          className="border border-violet-500 font-semibold rounded-lg px-6 py-4 flex items-center gap-3 hover:border-violet-300 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background"
         >
           <Plus size={20} className="text-violet-500" />
           Novo hábito
         </Dialog.Trigger>
 
-        {/* esse portal fará com que o modal abra por cima da tela inteira, e não por cima apenas do Header, que é esse componente, quem tem o botão que chama o modal */}
         <Dialog.Portal>
           <Dialog.Overlay className="w-screen h-screen bg-black/80 fixed inset-0" />
 
@@ -29,7 +27,7 @@ export function Header() {
             </Dialog.Close>
 
             <Dialog.Title className="text-3xl leading-tight font-extrabold">
-              Criar hábito
+              Criar bábito
             </Dialog.Title>
 
             <NewHabitForm />
@@ -39,5 +37,5 @@ export function Header() {
       </Dialog.Root>
 
     </div>
-  )
+  );
 }
