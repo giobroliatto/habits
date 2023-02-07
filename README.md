@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="NextLevelWeek" title="NLW Logo" src="./web/src/assets/nlw.svg" width="225px"/>
+    <img alt="NextLevelWeek" title="NLW Logo" src="./web/src/assets/nlw.svg" width="300px"/>
 </h1>
 
 # Rocketseat's NextLevelWeek #11 :rocket:
@@ -10,7 +10,7 @@ The focus was create an application from the beggining, fully functional and rea
 ## habits :calendar:
 
 <h1 align="center">
-    <img alt="habits Logo" title="habits Logo" src="./web/src/assets/logo.svg" width="300px"/>
+    <img alt="habits Logo" title="habits Logo" src="./web/src/assets/logo.svg" width="125px"/>
 </h1>
 
 text
@@ -22,13 +22,13 @@ Designed to fit in any screen size, the website works perfectly and maintains it
 ### Web :desktop_computer:
 
 <h1 align="center">
-    <img alt="NextLevelWeek" title="NLW Logo" src="./assets/imgs/alba-ss1.PNG" width="800px"/>
+    <img alt="Main screen" title="Main screen" src="" width="800px"/>
 </h1>
 
 ### Mobile :iphone:
 
 <h1 align="center">
-  <img src="https://media.giphy.com/media/cqSPmEoeIJcAtrL0vp/giphy.gif" />
+  <img src="" />
  </h1>
  
  #### <h3 align="center">You can check the website [here](https://giobroliatto.github.io//)</h3>
