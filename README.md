@@ -15,6 +15,8 @@
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
 
+[![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 </div>
 
 **English** · [Português](README.pt-BR.md)
@@ -106,6 +108,12 @@ server/   # Fastify API + Prisma (schema, migrations, seed and ERD)
 web/      # React app with Vite
 mobile/   # React Native app with Expo
 ```
+
+---
+
+## License
+
+[MIT](LICENSE)
 
 ---
 
